@@ -1,9 +1,9 @@
 // controllers/AuthController.js
 
-import { v4 as uuidv4 } from 'uuid';
-import sha1 from 'sha1';
-import dbClient from '../utils/db';
-import redisClient from '../utils/redis';
+const uuidv4 = require('uuid').v4;
+const sha1 = require('sha1');
+const dbClient = ('../utils/db');
+const redisClient = require('../utils/redis');
 
 class AuthController {
   // statci method to handle user login and token generation
@@ -69,4 +69,4 @@ class AuthController {
 }
 
 // export AuthController class
-export default AuthController;
+module.exports = AuthController;

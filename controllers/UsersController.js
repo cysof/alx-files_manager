@@ -1,8 +1,8 @@
 // controllers/UsersController.js
-import sha1 from 'sha1';
-import Queue from 'bull';
-import dbClient from '../utils/db';
-import redisClient from '../utils/redis';
+const sha1 = require('sha1');
+const Queue = require('bull');
+const dbClient = require('../utils/db');
+const redisClient = require('../utils/redis');
 
 const { ObjectId } = require('mongodb');
 // Create a Bull queue for user welcome emails
@@ -81,4 +81,4 @@ class UsersController {
   }
 }
 
-export default UsersController;
+module.exports = UsersController;

@@ -1,7 +1,7 @@
 // utils/redis.js
 
-import { createClient } from 'redis';
-import { promisify } from 'util';
+const { createClient } = require('redis');
+const { promisify } = require('util');
 
 /**
  * Redis client class to interact with the Redis server.

@@ -1,7 +1,7 @@
 // controllers/AppController.js
 
-import redisClient from '../utils/redis';
-import dbClient from '../utils/db';
+const redisClient = require('../utils/redis');
+const dbClient = require('../utils/db');
 
 /**
  * AppController class to handle the status and stats endpoints.
@@ -31,4 +31,4 @@ class AppController {
   }
 }
 
-export default AppController;
+module.exports = AppController;

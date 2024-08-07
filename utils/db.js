@@ -1,6 +1,6 @@
 // utils/db.js
 
-import { MongoClient } from 'mongodb';
+const { MongoClient } = require('mongodb');
 // import dotenv from 'dotenv';
 
 // load environment variables from .env file
@@ -63,4 +63,4 @@ class DBClient {
 
 // Create and export an instance of DBClient
 const dbClient = new DBClient();
-export default dbClient;
+module.exports = dbClient;
